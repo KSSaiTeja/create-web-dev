@@ -1,0 +1,16 @@
+{
+  "name": "create-web-dev",
+  "version": "1.0.0",
+  "description": "A package for creating stater pack of html,css and js files for the beginners",
+  "main": "create-web-dev.js",
+  "bin": {
+    "create-web-dev": "./create-web-dev.js"
+  },
+  "author": "K S Sai Teja",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "figlet": "^1.6.0",
+    "inquirer": "^9.2.11"
+  }
+}
