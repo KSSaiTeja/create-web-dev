@@ -1,12 +1,39 @@
-# Interactive Web Development Starter
+# Hello World Interactive
 
-Welcome to the Interactive Web Development Starter package! This NPX package helps you quickly create the foundation for web development projects with interactive elements. You can generate HTML, CSS, and JavaScript files with ease.
+This is a simple web application that allows you to change the message displayed on the webpage by clicking a button. It's a basic example of how you can use JavaScript to interact with the DOM (Document Object Model).
 
-## Installation
+## Table of Contents
 
-To use this package, you need Node.js installed on your computer. If you haven't already, you can download it from [nodejs.org](https://nodejs.org/).
+- [Hello World Interactive](#hello-world-interactive)
+  - [Table of Contents](#table-of-contents)
+  - [Demo](#demo)
+  - [Features](#features)
+  - [Getting Started](#getting-started)
+  - [Usage](#usage)
 
-Once Node.js is installed, you can create a new web development project by running the following command:
+## Demo
+
+You can see a live demo of this project [here](#).
+
+## Features
+
+- Change the displayed message on the webpage interactively.
+- Simple and responsive design.
+- Uses HTML, CSS, and JavaScript.
+
+## Getting Started
+
+To get started with this project, you need to clone the repository to your local machine and open the `index.html` file in a web browser.
 
 ```bash
-npx create-web-dev
+git clone https://github.com/your-username/hello-world-interactive.git
+cd hello-world-interactive
+```
+
+## Usage
+
+Open `index.html` in your preferred web browser.
+You'll see a **"Hello, World!"** message on the webpage.
+Click the **"Change Message"** button.
+A prompt will appear, allowing you to enter a new message.
+If you enter a new message and click "OK," the displayed message will change to the one you entered.
