@@ -1,20 +1,23 @@
 #!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
-import inquirer from 'inquirer';
-import chalk from 'chalk';
-import figlet from 'figlet';
+import fs from "fs";
+import path from "path";
+import inquirer from "inquirer";
+import chalk from "chalk";
+import figlet from "figlet";
 
 async function generateFiles(projectName) {
-    // Determine the current directory
-    const currentDirectory = process.cwd();
+  // Determine the current directory
+  const currentDirectory = process.cwd();
 
-    // Create a directory for the project (use the provided name or a default)
-    const projectDirectory = path.join(currentDirectory, projectName || 'my-web-project');
-    fs.mkdirSync(projectDirectory, { recursive: true });
+  // Create a directory for the project (use the provided name or a default)
+  const projectDirectory = path.join(
+    currentDirectory,
+    projectName || "my-web-project"
+  );
+  fs.mkdirSync(projectDirectory, { recursive: true });
 
-    // Create index.html
-    const htmlContent = `
+  // Create index.html
+  const htmlContent = `
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -34,10 +37,10 @@ async function generateFiles(projectName) {
     
 `;
 
-    fs.writeFileSync(path.join(projectDirectory, 'index.html'), htmlContent);
+  fs.writeFileSync(path.join(projectDirectory, "index.html"), htmlContent);
 
-    // Create style.css
-    const cssContent = `
+  // Create style.css
+  const cssContent = `
     body {
         font-family: Arial, sans-serif;
         background-color: #f2f2f2;
@@ -78,10 +81,10 @@ async function generateFiles(projectName) {
     
 `;
 
-    fs.writeFileSync(path.join(projectDirectory, 'style.css'), cssContent);
+  fs.writeFileSync(path.join(projectDirectory, "style.css"), cssContent);
 
-    // Create index.js
-    const jsContent = `
+  // Create index.js
+  const jsContent = `
     const messageElement = document.getElementById("message");
     const changeMessageButton = document.getElementById("changeMessage");
     changeMessageButton.addEventListener("click", () => {
@@ -92,24 +95,30 @@ async function generateFiles(projectName) {
 });
 `;
 
-    fs.writeFileSync(path.join(projectDirectory, 'index.js'), jsContent);
+  fs.writeFileSync(path.join(projectDirectory, "index.js"), jsContent);
 
-    console.log(chalk.green.bold('Web development files created successfully'));
-    console.log(chalk.italic.magentaBright(figlet.textSync(projectName || 'Web Dev Start')));
-    
-    console.log(chalk.greenBright(`To see the output run ${chalk.blueBright('index.html')} file`));
-    console.log(chalk.greenBright('Enjoy coding!'));
+  console.log(chalk.green.bold("Web development files created successfully"));
+  console.log(
+    chalk.italic.magentaBright(figlet.textSync(projectName || "Web Dev Start"))
+  );
+
+  console.log(
+    chalk.greenBright(
+      `To see the output run ${chalk.blueBright("index.html")} file`
+    )
+  );
+  console.log(chalk.greenBright("Enjoy coding!"));
 }
 
 // Prompt the user for the project name
 inquirer
-    .prompt([
-        {
-            type: 'input',
-            name: 'projectName',
-            message: 'Name of the project? (Press Enter for default): ',
-        },
-    ])
-    .then((answers) => {
-        generateFiles(answers.projectName);
-    });
+  .prompt([
+    {
+      type: "input",
+      name: "projectName",
+      message: "Name of the project? (Press Enter for default): ",
+    },
+  ])
+  .then((answers) => {
+    generateFiles(answers.projectName);
+  });
