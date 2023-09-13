@@ -6,14 +6,9 @@ This is a simple web application that allows you to change the message displayed
 
 - [Hello World Interactive](#hello-world-interactive)
   - [Table of Contents](#table-of-contents)
-  - [Demo](#demo)
   - [Features](#features)
   - [Getting Started](#getting-started)
   - [Usage](#usage)
-
-## Demo
-
-You can see a live demo of this project [here](#).
 
 ## Features
 
